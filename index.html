@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -52,40 +51,19 @@ section{
   max-width:900px;
 }
 
-/* 🔥 元の迫力サイズに戻す */
-h1{
-  font-size:3.2rem;
-  line-height:1.4;
-  font-weight:800;
-}
+h1{font-size:3.2rem;line-height:1.4;font-weight:800;}
+h2{font-size:2.6rem;color:#ffe600;font-weight:800;}
+p,li{font-size:1.8rem;line-height:1.8;}
 
-h2{
-  font-size:2.6rem;
-  color:#ffe600;
-  font-weight:800;
-}
+ul{max-width:700px;margin:0 auto;text-align:left;}
 
-p,li{
-  font-size:1.8rem;
-  line-height:1.8;
-}
-
-ul{
-  text-align:left;
-  max-width:700px;
-  margin:0 auto;
-}
-
-/* 最後の一押し（そのまま強め） */
 .last-push{
   margin-top:25px;
   font-size:2rem;
   font-weight:800;
   color:#ffcc00;
-  line-height:1.7;
 }
 
-/* CTA */
 .fixed-cta{
   position:fixed;
   bottom:0;
@@ -95,7 +73,6 @@ ul{
   gap:10px;
   padding:10px;
   background:rgba(0,0,0,0.9);
-  box-sizing:border-box;
   z-index:9999;
 }
 
@@ -111,7 +88,6 @@ ul{
   text-decoration:none;
 }
 
-/* スマホ */
 @media(max-width:768px){
   h1{font-size:2.4rem;}
   h2{font-size:2rem;}
@@ -119,26 +95,23 @@ ul{
   .fixed-cta{flex-direction:column;}
 }
 
-/* 動画 */
 .video-wrap{
   position:relative;
   width:100%;
   padding-top:56.25%;
-  margin-top:20px;
 }
 
 .video-wrap iframe{
   position:absolute;
   top:0;left:0;
   width:100%;height:100%;
-  border-radius:12px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- GTM noscript（修正済み） -->
+<!-- GTM noscript -->
 <noscript>
 <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KTG3W6VN"
 height="0" width="0" style="display:none;visibility:hidden"></iframe>
@@ -150,7 +123,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <div class="content">
 
 <h1>平均30点→80点へ<br>最短1ヶ月で成績アップ</h1>
-
 <p>富山・石川・福井｜無料体験受付中</p>
 
 <div class="last-push">
@@ -161,97 +133,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </div>
 </section>
 
-<!-- 悩み -->
-<section style="background:url('https://images.pexels.com/photos/35769752/pexels-photo-35769752.jpeg') center/cover;">
-<div class="overlay"></div>
-<div class="content">
-
-<h2>こんな悩みありませんか？</h2>
-<ul>
-<li>勉強のやり方がわからない</li>
-<li>頑張っても点数が上がらない</li>
-<li>家で勉強しない</li>
-<li>何をすればいいか分からない</li>
-</ul>
-
-</div>
-</section>
-
-<!-- 解決 -->
-<section style="background:url('https://images.pexels.com/photos/33846282/pexels-photo-33846282.jpeg') center/cover;">
-<div class="overlay"></div>
-<div class="content">
-
-<h2>育英センターなら解決できます</h2>
-<ul>
-<li>学習のやり方から徹底指導</li>
-<li>テスト・受験対策完全対応</li>
-<li>質問し放題</li>
-<li>学習習慣までサポート</li>
-</ul>
-
-</div>
-</section>
-
-<!-- 実績 -->
-<section style="background:url('https://images.pexels.com/photos/31861700/pexels-photo-31861700.jpeg') center/cover;">
-<div class="overlay"></div>
-<div class="content">
-
-<h2>実際の成績アップ例</h2>
-<p>数学 30点 → 82点</p>
-<p>英語 40点 → 78点</p>
-
-<div class="last-push">
-※80%以上の生徒が成績アップしています
-</div>
-
-</div>
-</section>
-
-<!-- 動画 -->
-<section style="background:url('https://images.pexels.com/photos/4144222/pexels-photo-4144222.jpeg') center/cover;">
-<div class="overlay"></div>
-<div class="content">
-
-<h2>授業イメージ（1分で分かる）</h2>
-
-<div class="video-wrap">
-<iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" allowfullscreen></iframe>
-</div>
-
-</div>
-</section>
-
-<!-- クロージング -->
-<section style="background:url('https://images.pexels.com/photos/4145191/pexels-photo-4145191.jpeg') center/cover;">
-<div class="overlay"></div>
-<div class="content">
-
-<h2>ここまで見たあなたへ</h2>
-
-<div class="last-push">
-今のままの勉強法では大きく伸びる可能性は高くありません。<br><br>
-
-でも逆に言えば、<br>
-<span style="color:#ffcc00;font-weight:800;">
-やり方を変えれば短期間で一気に伸びます。
-</span><br><br>
-
-あとは「行動するかどうか」だけです。
-</div>
-
-</div>
-</section>
-
 <!-- CTA -->
 <div class="fixed-cta">
-<a href="https://www.toyama-ikuei.com/apply/" class="cta-btn">富山で無料体験</a>
-<a href="https://www.kanazawa-ikuei.com/apply/" class="cta-btn">金沢で無料体験</a>
-<a href="https://www.fukui-ikuei.com/apply/" class="cta-btn">福井で無料体験</a>
+
+<a href="https://www.toyama-ikuei.com/apply/" class="cta-btn cta-track"
+data-location="toyama"
+data-section="fixed_footer"
+data-type="free_trial"
+data-page="lp"
+data-id="toyama_cta">
+富山で無料体験
+</a>
+
+<a href="https://www.kanazawa-ikuei.com/apply/" class="cta-btn cta-track"
+data-location="kanazawa"
+data-section="fixed_footer"
+data-type="free_trial"
+data-page="lp"
+data-id="kanazawa_cta">
+金沢で無料体験
+</a>
+
+<a href="https://www.fukui-ikuei.com/apply/" class="cta-btn cta-track"
+data-location="fukui"
+data-section="fixed_footer"
+data-type="free_trial"
+data-page="lp"
+data-id="fukui_cta">
+福井で無料体験
+</a>
+
 </div>
 
-<!-- 計測（最小・安定版） -->
+<!-- 計測（完成版） -->
 <script>
 window.dataLayer = window.dataLayer || [];
 
@@ -261,13 +175,21 @@ function device(){
   return 'desktop';
 }
 
-document.querySelectorAll('.cta-btn').forEach(btn=>{
+document.querySelectorAll('.cta-track').forEach(btn=>{
   btn.addEventListener('click', ()=>{
     window.dataLayer.push({
-      event:'generate_lead',
-      cta_text:btn.innerText,
-      cta_url:btn.href,
-      device:device()
+      event: 'cta_click',
+
+      cta_location: btn.dataset.location,
+      cta_section: btn.dataset.section,
+      cta_type: btn.dataset.type,
+      page_type: btn.dataset.page,
+      cta_id: btn.dataset.id,
+
+      device_category: device(),
+
+      cta_text: btn.innerText,
+      cta_url: btn.href
     });
   });
 });
