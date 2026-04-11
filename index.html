@@ -35,8 +35,21 @@ ul{text-align:left;max-width:700px;margin:0 auto;}
 h1{font-size:2.4rem;}h2{font-size:2rem;}p,li{font-size:1.4rem;}
 .fixed-cta{flex-direction:column;}
 }
-.video-wrap{position:relative;width:100%;padding-top:56.25%;}
-.video-wrap iframe{position:absolute;width:100%;height:100%;}
+
+/* ★ 修正済み（中央寄せ） */
+.video-wrap{
+  position:relative;
+  width:100%;
+  max-width:800px;
+  margin:20px auto 0;
+  padding-top:56.25%;
+}
+.video-wrap iframe{
+  position:absolute;
+  top:0;left:0;
+  width:100%;height:100%;
+  border-radius:12px;
+}
 </style>
 </head>
 
@@ -47,20 +60,15 @@ h1{font-size:2.4rem;}h2{font-size:2rem;}p,li{font-size:1.4rem;}
 height="0" width="0" style="display:none;"></iframe>
 </noscript>
 
-<!-- FV -->
 <section data-section="fv" style="background:url('https://images.pexels.com/photos/32279010/pexels-photo-32279010.jpeg') center/cover;">
 <div class="overlay"></div>
 <div class="content">
 <h1>平均30点→80点へ<br>最短1ヶ月で成績アップ</h1>
 <p>富山・石川・福井｜無料体験受付中</p>
-<div class="last-push">
-今のままの勉強では点数はほとんど変わりません。<br>
-でも「やり方」を変えれば短期間で伸びます。
-</div>
+<div class="last-push">今のままの勉強では点数はほとんど変わりません。<br>でも「やり方」を変えれば短期間で伸びます。</div>
 </div>
 </section>
 
-<!-- 悩み -->
 <section data-section="problem" style="background:url('https://images.pexels.com/photos/35769752/pexels-photo-35769752.jpeg') center/cover;">
 <div class="overlay"></div>
 <div class="content">
@@ -74,7 +82,6 @@ height="0" width="0" style="display:none;"></iframe>
 </div>
 </section>
 
-<!-- 解決 -->
 <section data-section="solution" style="background:url('https://images.pexels.com/photos/33846282/pexels-photo-33846282.jpeg') center/cover;">
 <div class="overlay"></div>
 <div class="content">
@@ -88,20 +95,16 @@ height="0" width="0" style="display:none;"></iframe>
 </div>
 </section>
 
-<!-- 実績 -->
 <section data-section="result" style="background:url('https://images.pexels.com/photos/31861700/pexels-photo-31861700.jpeg') center/cover;">
 <div class="overlay"></div>
 <div class="content">
 <h2>実際の成績アップ例</h2>
 <p>数学 30点 → 82点</p>
 <p>英語 40点 → 78点</p>
-<div class="last-push">
-※80%以上の生徒が成績アップしています
-</div>
+<div class="last-push">※80%以上の生徒が成績アップしています</div>
 </div>
 </section>
 
-<!-- 動画 -->
 <section data-section="video" style="background:url('https://images.pexels.com/photos/4144222/pexels-photo-4144222.jpeg') center/cover;">
 <div class="overlay"></div>
 <div class="content">
@@ -112,7 +115,6 @@ height="0" width="0" style="display:none;"></iframe>
 </div>
 </section>
 
-<!-- クロージング -->
 <section data-section="closing" style="background:url('https://images.pexels.com/photos/4145191/pexels-photo-4145191.jpeg') center/cover;">
 <div class="overlay"></div>
 <div class="content">
@@ -120,15 +122,12 @@ height="0" width="0" style="display:none;"></iframe>
 <div class="last-push">
 今のままの勉強法では大きく伸びる可能性は高くありません。<br><br>
 でも逆に言えば、<br>
-<span style="color:#ffcc00;font-weight:800;">
-やり方を変えれば短期間で一気に伸びます。
-</span><br><br>
+<span style="color:#ffcc00;font-weight:800;">やり方を変えれば短期間で一気に伸びます。</span><br><br>
 あとは「行動するかどうか」だけです。
 </div>
 </div>
 </section>
 
-<!-- CTA -->
 <div class="fixed-cta">
 <a href="https://www.toyama-ikuei.com/apply/" class="cta-btn cta-track" data-location="toyama" data-type="free_trial" data-page="lp" data-id="toyama_cta">富山で無料体験</a>
 <a href="https://www.kanazawa-ikuei.com/apply/" class="cta-btn cta-track" data-location="kanazawa" data-type="free_trial" data-page="lp" data-id="kanazawa_cta">金沢で無料体験</a>
@@ -143,11 +142,11 @@ function device(){
 }
 
 function getCurrentSection(){
-  let current = 'unknown';
+  let current='unknown';
   document.querySelectorAll('section').forEach(sec=>{
-    const rect = sec.getBoundingClientRect();
-    if(rect.top <= window.innerHeight/2 && rect.bottom >= window.innerHeight/2){
-      current = sec.dataset.section;
+    const rect=sec.getBoundingClientRect();
+    if(rect.top<=window.innerHeight/2 && rect.bottom>=window.innerHeight/2){
+      current=sec.dataset.section;
     }
   });
   return current;
@@ -156,17 +155,16 @@ function getCurrentSection(){
 document.querySelectorAll('.cta-track').forEach(btn=>{
   btn.addEventListener('click', ()=>{
     dataLayer.push({
-      event: 'cta_click',
-      cta_location: btn.dataset.location,
-      cta_section: getCurrentSection(),
-      cta_type: btn.dataset.type,
-      page_type: btn.dataset.page,
-      cta_id: btn.dataset.id,
-      device_category: device(),
-      cta_text: btn.innerText,
-      cta_url: btn.href,
-      scroll_depth: Math.round((window.scrollY/(document.body.scrollHeight-window.innerHeight))*100),
-      page_url: location.href
+      event:'cta_click',
+      cta_location:btn.dataset.location,
+      cta_section:getCurrentSection(),
+      cta_type:btn.dataset.type,
+      page_type:btn.dataset.page,
+      cta_id:btn.dataset.id,
+      device_category:device(),
+      cta_text:btn.innerText,
+      scroll_depth:Math.round((window.scrollY/(document.body.scrollHeight-window.innerHeight))*100),
+      page_url:location.href
     });
   });
 });
