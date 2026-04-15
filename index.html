@@ -7,6 +7,18 @@
 <title>育英センター｜無料体験受付中</title>
 <meta name="description" content="富山・石川・福井の学習塾『育英センター』。最短1ヶ月で成績アップを目指す無料体験受付中。">
 
+<!-- Google Tag Manager -->
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});
+var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'? '&l='+l : '';
+j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KTG3W6VN');
+</script>
+<!-- End GTM -->
+
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
 
 <style>
@@ -82,7 +94,6 @@ ul{max-width:700px;margin:0 auto;text-align:left;}
   .cta-bar{flex-direction:column;}
 }
 
-/* video */
 .video-wrap{
   position:relative;
   width:100%;
@@ -103,9 +114,10 @@ ul{max-width:700px;margin:0 auto;text-align:left;}
 
 <body>
 
+<!-- GTM noscript -->
 <noscript>
 <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KTG3W6VN"
-height="0" width="0" style="display:none;"></iframe>
+height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 
 <!-- FV -->
@@ -186,71 +198,59 @@ loading="lazy" allowfullscreen></iframe>
 
 <!-- CTA -->
 <div class="cta-bar">
-<a href="https://www.toyama-ikuei.com/apply/"
-class="cta-btn cta-track"
-data-location="toyama">富山</a>
-
-<a href="https://www.kanazawa-ikuei.com/apply/"
-class="cta-btn cta-track"
-data-location="kanazawa">金沢</a>
-
-<a href="https://www.fukui-ikuei.com/apply/"
-class="cta-btn cta-track"
-data-location="fukui">福井</a>
+<a href="https://www.toyama-ikuei.com/apply/" class="cta-btn cta-track" data-location="toyama">富山</a>
+<a href="https://www.kanazawa-ikuei.com/apply/" class="cta-btn cta-track" data-location="kanazawa">金沢</a>
+<a href="https://www.fukui-ikuei.com/apply/" class="cta-btn cta-track" data-location="fukui">福井</a>
 </div>
 
+<!-- tracking -->
 <script>
 window.dataLayer = window.dataLayer || [];
 
-/* device */
 function device(){
-  if (window.matchMedia("(max-width:768px)").matches) return "mobile";
-  if (window.matchMedia("(max-width:1024px)").matches) return "tablet";
-  return "desktop";
+  return window.matchMedia("(max-width:768px)").matches ? "mobile"
+       : window.matchMedia("(max-width:1024px)").matches ? "tablet"
+       : "desktop";
 }
 
-/* scroll depth safe */
 function scrollDepth(){
   const max = document.body.scrollHeight - window.innerHeight;
   return max > 0 ? Math.round((window.scrollY / max) * 100) : 0;
 }
 
-/* section detection stable */
-function getCurrentSection(){
-  let best = "unknown";
-  let min = Infinity;
+function getSection(){
+  let best="unknown",min=Infinity;
 
   document.querySelectorAll("section").forEach(sec=>{
-    const r = sec.getBoundingClientRect();
-    const d = Math.abs(r.top - window.innerHeight/2);
-
-    if (d < min){
-      min = d;
-      best = sec.dataset.section || "unknown";
+    const r=sec.getBoundingClientRect();
+    const d=Math.abs(r.top-window.innerHeight/2);
+    if(d<min){
+      min=d;
+      best=sec.dataset.section||"unknown";
     }
   });
 
   return best;
 }
 
-/* lazy youtube */
-window.addEventListener("load", ()=>{
-  document.querySelectorAll("iframe[data-src]").forEach(el=>{
-    el.src = el.dataset.src;
+document.addEventListener("DOMContentLoaded",()=>{
+  document.querySelectorAll(".cta-track").forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      dataLayer.push({
+        event:"cta_click",
+        cta_location:btn.dataset.location,
+        cta_section:getSection(),
+        device_category:device(),
+        scroll_depth:scrollDepth(),
+        page_url:location.href
+      });
+    });
   });
 });
 
-/* CTA tracking */
-document.querySelectorAll(".cta-track").forEach(btn=>{
-  btn.addEventListener("click", ()=>{
-    dataLayer.push({
-      event:"cta_click",
-      cta_location:btn.dataset.location,
-      cta_section:getCurrentSection(),
-      device_category:device(),
-      scroll_depth:scrollDepth(),
-      page_url:location.href
-    });
+window.addEventListener("load",()=>{
+  document.querySelectorAll("iframe[data-src]").forEach(el=>{
+    el.src = el.dataset.src;
   });
 });
 </script>
