@@ -5,6 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>育英センター｜無料体験受付中</title>
+<meta name="description" content="富山・石川・福井の学習塾『育英センター』。最短1ヶ月で成績アップを目指す無料体験受付中。">
+
+<!-- ✅ GTM -->
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});
+var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer' ? '&l='+l : '';
+j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KTG3W6VN');
+</script>
 
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
 
@@ -43,14 +55,21 @@ section{
 h1{font-size:3rem;font-weight:800;}
 h2{font-size:2.3rem;color:#ffe600;font-weight:800;}
 p,li{font-size:1.5rem;line-height:1.8;}
+ul{max-width:700px;margin:0 auto;text-align:left;}
+
+.highlight{
+  color:#ffcc00;
+  font-weight:800;
+}
 
 .cta-bar{
   position:fixed;
   bottom:0;
+  left:0;
   width:100%;
   display:flex;
-  gap:8px;
   padding:10px;
+  gap:8px;
   background:rgba(0,0,0,0.92);
   z-index:9999;
 }
@@ -67,9 +86,19 @@ p,li{font-size:1.5rem;line-height:1.8;}
   text-decoration:none;
 }
 
-/* ▼ 動画 */
+@media(max-width:768px){
+  h1{font-size:2.1rem;}
+  h2{font-size:1.7rem;}
+  p,li{font-size:1.2rem;}
+  .cta-bar{flex-direction:column;}
+}
+
+/* 動画 */
 .video-thumb{
   position:relative;
+  width:100%;
+  max-width:800px;
+  margin:20px auto;
   cursor:pointer;
 }
 
@@ -85,57 +114,68 @@ p,li{font-size:1.5rem;line-height:1.8;}
   transform:translate(-50%,-50%);
   font-size:60px;
 }
-
-/* レスポンシブ */
-@media(max-width:768px){
-  h1{font-size:2rem;}
-  h2{font-size:1.6rem;}
-  p,li{font-size:1.2rem;}
-  .cta-bar{flex-direction:column;}
-}
 </style>
 </head>
 
 <body>
 
+<!-- ✅ GTM noscript -->
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KTG3W6VN"
+height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+
 <!-- FV -->
-<section data-bg="https://images.pexels.com/photos/32279010/pexels-photo-32279010.jpeg">
+<section data-bg="https://images.pexels.com/photos/32279010/pexels-photo-32279010.jpeg" data-section="fv">
 <div class="overlay"></div>
 <div class="content">
 <h1>平均30点 → 80点へ<br>最短1ヶ月で成績アップ</h1>
 <p>富山・石川・福井｜無料体験受付中</p>
+<p class="highlight">やり方を変えれば、成績は短期間で伸びます</p>
 </div>
 </section>
 
 <!-- problem -->
-<section data-bg="https://images.pexels.com/photos/35769752/pexels-photo-35769752.jpeg">
+<section data-bg="https://images.pexels.com/photos/35769752/pexels-photo-35769752.jpeg" data-section="problem">
 <div class="overlay"></div>
 <div class="content">
 <h2>こんな悩みありませんか？</h2>
-<p>勉強方法がわからない / 点数が上がらない / 続かない</p>
+<ul>
+<li>勉強方法がわからない</li>
+<li>頑張っても点数が上がらない</li>
+<li>家で勉強が続かない</li>
+<li>何をすればいいか分からない</li>
+</ul>
 </div>
 </section>
 
 <!-- solution -->
-<section data-bg="https://images.pexels.com/photos/33846282/pexels-photo-33846282.jpeg">
+<section data-bg="https://images.pexels.com/photos/33846282/pexels-photo-33846282.jpeg" data-section="solution">
 <div class="overlay"></div>
 <div class="content">
 <h2>育英センターの解決法</h2>
-<p>やり方から徹底指導・質問し放題・習慣化</p>
+<ul>
+<li>学習のやり方から徹底指導</li>
+<li>テスト・受験対策に完全対応</li>
+<li>質問し放題</li>
+<li>学習習慣までサポート</li>
+</ul>
 </div>
 </section>
 
 <!-- result -->
-<section data-bg="https://images.pexels.com/photos/31861700/pexels-photo-31861700.jpeg">
+<section data-bg="https://images.pexels.com/photos/31861700/pexels-photo-31861700.jpeg" data-section="result">
 <div class="overlay"></div>
 <div class="content">
 <h2>成績アップ実績</h2>
-<p>30点 → 82点 / 40点 → 78点</p>
+<p>数学 30点 → 82点</p>
+<p>英語 40点 → 78点</p>
+<p class="highlight">※在籍生の約86%が平均15点以上アップ（直近3ヶ月）</p>
 </div>
 </section>
 
-<!-- video（改善版） -->
-<section data-bg="https://images.pexels.com/photos/4144222/pexels-photo-4144222.jpeg">
+<!-- video -->
+<section data-bg="https://images.pexels.com/photos/4144222/pexels-photo-4144222.jpeg" data-section="video">
 <div class="overlay"></div>
 <div class="content">
 <h2>授業イメージ（1分）</h2>
@@ -148,19 +188,28 @@ p,li{font-size:1.5rem;line-height:1.8;}
 </div>
 </section>
 
+<!-- closing -->
+<section data-bg="https://images.pexels.com/photos/4145191/pexels-photo-4145191.jpeg" data-section="closing">
+<div class="overlay"></div>
+<div class="content">
+<h2>最後に</h2>
+<p class="highlight">
+今のままでは大きく伸びる可能性は高くありません。<br><br>
+しかし「やり方」を変えれば短期間で結果は出ます。
+</p>
+<p>まずは無料体験で体感してください</p>
+</div>
+</section>
+
 <!-- CTA -->
 <div class="cta-bar">
-<a href="#" class="cta-btn">富山</a>
-<a href="#" class="cta-btn">金沢</a>
-<a href="#" class="cta-btn">福井</a>
+<a href="https://www.toyama-ikuei.com/apply/" class="cta-btn cta-track" data-location="toyama">富山</a>
+<a href="https://www.kanazawa-ikuei.com/apply/" class="cta-btn cta-track" data-location="kanazawa">金沢</a>
+<a href="https://www.fukui-ikuei.com/apply/" class="cta-btn cta-track" data-location="fukui">福井</a>
 </div>
 
 <script>
-/* ======================
-  ① 背景画像遅延読み込み
-====================== */
-const sections = document.querySelectorAll("section");
-
+/* 背景画像遅延 */
 const observer = new IntersectionObserver(entries=>{
   entries.forEach(entry=>{
     if(entry.isIntersecting){
@@ -170,32 +219,50 @@ const observer = new IntersectionObserver(entries=>{
     }
   });
 });
+document.querySelectorAll("section").forEach(sec=>observer.observe(sec));
 
-sections.forEach(sec=>observer.observe(sec));
-
-/* ======================
-  ② 動画クリックで読み込み
-====================== */
+/* 動画クリックで読み込み */
 document.getElementById("video").addEventListener("click",function(){
   this.innerHTML = `
-    <iframe width="100%" height="450"
-    src="https://www.youtube.com/embed/ScMzIvxBSi4?autoplay=1"
-    frameborder="0" allowfullscreen></iframe>
-  `;
+  <iframe width="100%" height="450"
+  src="https://www.youtube.com/embed/ScMzIvxBSi4?autoplay=1"
+  frameborder="0" allowfullscreen></iframe>`;
 });
 
-/* ======================
-  ③ 軽量トラッキング
-====================== */
+/* 計測 */
+window.dataLayer = window.dataLayer || [];
+
 function device(){
   return window.innerWidth < 768 ? "mobile" : "desktop";
 }
 
-document.querySelectorAll(".cta-btn").forEach(btn=>{
+function scrollDepth(){
+  const max = document.body.scrollHeight - window.innerHeight;
+  return max > 0 ? Math.round((window.scrollY / max) * 100) : 0;
+}
+
+function getSection(){
+  let best="unknown",min=Infinity;
+  document.querySelectorAll("section").forEach(sec=>{
+    const r=sec.getBoundingClientRect();
+    const d=Math.abs(r.top-window.innerHeight/2);
+    if(d<min){
+      min=d;
+      best=sec.dataset.section||"unknown";
+    }
+  });
+  return best;
+}
+
+document.querySelectorAll(".cta-track").forEach(btn=>{
   btn.addEventListener("click",()=>{
-    console.log({
+    dataLayer.push({
       event:"cta_click",
-      device:device()
+      cta_location:btn.dataset.location,
+      cta_section:getSection(),
+      device_category:device(),
+      scroll_depth:scrollDepth(),
+      page_url:location.href
     });
   });
 });
