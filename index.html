@@ -1,272 +1,169 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KTG3W6VN');</script>
 
-<title>育英センター｜無料体験受付中</title>
-<meta name="description" content="富山・石川・福井の学習塾『育英センター』。最短1ヶ月で成績アップを目指す無料体験受付中。">
+    <title>育英センター｜平均30点から80点へ。幼児から大学受験までの一貫指導</title>
+    <meta name="description" content="富山・石川・福井の学習塾『育英センター』。独自の教育サイクルで、基礎学力の定着から難関大学合格までをフルサポート。無料体験受付中。">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #003366; /* 信頼のネイビー */
+            --secondary: #004c99;
+            --accent: #ffcc00; /* 実績のゴールド */
+            --bg-light: #f4f7f9;
+            --text-main: #333333;
+            --white: #ffffff;
+        }
 
-<!-- ✅ GTM -->
-<script>
-(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});
-var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer' ? '&l='+l : '';
-j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KTG3W6VN');
-</script>
+        body {
+            margin: 0; font-family: 'Noto Sans JP', sans-serif;
+            color: var(--text-main); line-height: 1.8; overflow-x: hidden;
+        }
 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+        section { padding: clamp(60px, 8vw, 100px) 0; text-align: center; }
 
-<style>
-body{
-  margin:0;
-  font-family:'Noto Sans JP',sans-serif;
-  color:#fff;
-  overflow-x:hidden;
-}
+        h2 { font-size: clamp(1.8rem, 4vw, 2.4rem); font-weight: 900; margin-bottom: 50px; }
+        h2 span { border-bottom: 4px solid var(--accent); }
 
-section{
-  position:relative;
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:80px 20px;
-  background-size:cover;
-  background-position:center;
-}
+        /* FV */
+        .fv {
+            height: 80vh; display: flex; align-items: center;
+            background: linear-gradient(rgba(0,30,60,0.6), rgba(0,30,60,0.6)), 
+                        url('https://images.pexels.com/photos/32279010/pexels-photo-32279010.jpeg') center/cover no-repeat;
+            color: var(--white);
+        }
+        .fv h1 { font-size: clamp(2rem, 5vw, 3.8rem); line-height: 1.3; font-weight: 900; }
+        .fv p { font-size: 1.2rem; margin-top: 20px; font-weight: bold; letter-spacing: 0.1em; }
 
-.overlay{
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,0.6);
-}
+        /* ロードマップ */
+        .roadmap { background: var(--bg-light); }
+        .roadmap-list { text-align: left; max-width: 700px; margin: 0 auto; position: relative; padding: 20px 0; }
+        .roadmap-item {
+            background: var(--white); margin-bottom: 20px; padding: 25px;
+            border-radius: 8px; border-left: 6px solid var(--primary);
+            position: relative; box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .roadmap-item::after {
+            content: '↓'; position: absolute; bottom: -25px; left: 30px;
+            color: var(--primary); font-weight: bold; font-size: 1.5rem;
+        }
+        .roadmap-item:last-child::after { content: ''; }
+        .roadmap-tag { font-size: 0.85rem; color: var(--primary); font-weight: bold; border: 1px solid var(--primary); padding: 2px 8px; border-radius: 4px; }
+        .roadmap-title { font-size: 1.25rem; font-weight: bold; margin: 10px 0; display: block; }
 
-.content{
-  position:relative;
-  z-index:2;
-  max-width:900px;
-}
+        /* 実績ボックス */
+        .result-box {
+            background: var(--primary); color: var(--white); padding: 50px 20px; border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,51,102,0.3);
+        }
+        .result-num { font-size: clamp(3rem, 8vw, 5rem); color: var(--accent); font-weight: 900; line-height: 1; }
 
-h1{font-size:3rem;font-weight:800;}
-h2{font-size:2.3rem;color:#ffe600;font-weight:800;}
-p,li{font-size:1.5rem;line-height:1.8;}
-ul{max-width:700px;margin:0 auto;text-align:left;}
+        /* CTA Bar */
+        .cta-bar {
+            position: fixed; bottom: 0; width: 100%; display: flex; z-index: 1000;
+            background: var(--white); box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+        }
+        .cta-btn {
+            flex: 1; padding: 22px 10px; color: var(--white); text-decoration: none;
+            font-weight: bold; font-size: 1rem; text-align: center; transition: 0.3s;
+        }
+        .btn-toyama { background: #002d5a; }
+        .btn-ishikawa { background: #003d7a; }
+        .btn-fukui { background: #004d99; }
+        .cta-btn:hover { filter: brightness(1.2); }
 
-.highlight{
-  color:#ffcc00;
-  font-weight:800;
-}
-
-.cta-bar{
-  position:fixed;
-  bottom:0;
-  left:0;
-  width:100%;
-  display:flex;
-  padding:10px;
-  gap:8px;
-  background:rgba(0,0,0,0.92);
-  z-index:9999;
-}
-
-.cta-btn{
-  flex:1;
-  padding:16px;
-  font-size:1.1rem;
-  font-weight:800;
-  color:#fff;
-  text-align:center;
-  border-radius:10px;
-  background:linear-gradient(45deg,#ff6600,#ffcc00);
-  text-decoration:none;
-}
-
-@media(max-width:768px){
-  h1{font-size:2.1rem;}
-  h2{font-size:1.7rem;}
-  p,li{font-size:1.2rem;}
-  .cta-bar{flex-direction:column;}
-}
-
-/* 動画 */
-.video-thumb{
-  position:relative;
-  width:100%;
-  max-width:800px;
-  margin:20px auto;
-  cursor:pointer;
-}
-
-.video-thumb img{
-  width:100%;
-  border-radius:12px;
-}
-
-.play-btn{
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  font-size:60px;
-}
-</style>
+        @media (max-width: 768px) {
+            .cta-btn { font-size: 0.8rem; padding: 18px 5px; }
+            section { padding: 60px 0; }
+        }
+    </style>
 </head>
-
 <body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KTG3W6VN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-<!-- ✅ GTM noscript -->
-<noscript>
-<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KTG3W6VN"
-height="0" width="0" style="display:none;visibility:hidden"></iframe>
-</noscript>
+    <section class="fv">
+        <div class="container">
+            <h1>平均30点 → <span style="color:var(--accent)">80点</span>へ<br>確かな指導で、成績は飛躍的に向上する。</h1>
+            <p>富山・石川・福井｜無料体験授業受付中</p>
+        </div>
+    </section>
 
-<!-- FV -->
-<section data-bg="https://images.pexels.com/photos/32279010/pexels-photo-32279010.jpeg" data-section="fv">
-<div class="overlay"></div>
-<div class="content">
-<h1>平均30点 → 80点へ<br>最短1ヶ月で成績アップ</h1>
-<p>富山・石川・福井｜無料体験受付中</p>
-<p class="highlight">やり方を変えれば、成績は短期間で伸びます</p>
-</div>
-</section>
+    <section class="roadmap">
+        <div class="container">
+            <h2><span>一貫教育ロードマップ</span></h2>
+            <div class="roadmap-list">
+                <div class="roadmap-item">
+                    <span class="roadmap-tag">幼児・小学生</span>
+                    <span class="roadmap-title">思考力と学習習慣の定着</span>
+                    <p>全ての土台となる「学ぶ力」を養い、小学校進路（公立・片山学園）をトータルサポート。</p>
+                </div>
+                <div class="roadmap-item">
+                    <span class="roadmap-tag">中学生・高校生</span>
+                    <span class="roadmap-title">志望校合格への戦略的学習</span>
+                    <p>公立トップ校・私立上位校合格へ。片山学園一貫教育との連携で最適な進路を選択できます。</p>
+                </div>
+                <div class="roadmap-item">
+                    <span class="roadmap-tag">予備校・大学受験</span>
+                    <span class="roadmap-title">難関大学への最終強化</span>
+                    <p>育英予備校による圧倒的な指導力で、医学部・旧帝国大学などの最難関突破を目指します。</p>
+                </div>
+                <div class="roadmap-item" style="border-left-color: var(--accent); background: #fffdf0;">
+                    <span class="roadmap-tag" style="color:#d4af37; border-color:#d4af37;">進学実績</span>
+                    <span class="roadmap-title">東京大学理科三類 ほか難関校多数</span>
+                    <p>一人ひとりの夢を現実に。北陸エリア最大級の合格実績が信頼の証です。</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- problem -->
-<section data-bg="https://images.pexels.com/photos/35769752/pexels-photo-35769752.jpeg" data-section="problem">
-<div class="overlay"></div>
-<div class="content">
-<h2>こんな悩みありませんか？</h2>
-<ul>
-<li>勉強方法がわからない</li>
-<li>頑張っても点数が上がらない</li>
-<li>家で勉強が続かない</li>
-<li>何をすればいいか分からない</li>
-</ul>
-</div>
-</section>
+    <section>
+        <div class="container">
+            <div class="result-box">
+                <h2>定期テスト対策の実績</h2>
+                <p style="font-size: 1.5rem; margin-bottom: 0;">在籍生の約<span class="result-num">86</span>％が</p>
+                <p style="font-size: 1.5rem; margin-top: 0;">平均<span class="result-num">15</span>点以上の得点アップ</p>
+                <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 20px;">※2024年度直近3ヶ月実績（自社調べ）</p>
+            </div>
+        </div>
+    </section>
 
-<!-- solution -->
-<section data-bg="https://images.pexels.com/photos/33846282/pexels-photo-33846282.jpeg" data-section="solution">
-<div class="overlay"></div>
-<div class="content">
-<h2>育英センターの解決法</h2>
-<ul>
-<li>学習のやり方から徹底指導</li>
-<li>テスト・受験対策に完全対応</li>
-<li>質問し放題</li>
-<li>学習習慣までサポート</li>
-</ul>
-</div>
-</section>
+    <section style="margin-bottom: 100px;">
+        <div class="container">
+            <h2>まずは無料体験で「違い」を実感してください</h2>
+            <p>「自分に合った勉強法がわからない」「今の塾で伸び悩んでいる」<br>
+            そんな不安を、育英センターの講師陣が解決します。強引な勧誘は一切ありませんので、ご安心ください。</p>
+        </div>
+    </section>
 
-<!-- result -->
-<section data-bg="https://images.pexels.com/photos/31861700/pexels-photo-31861700.jpeg" data-section="result">
-<div class="overlay"></div>
-<div class="content">
-<h2>成績アップ実績</h2>
-<p>数学 30点 → 82点</p>
-<p>英語 40点 → 78点</p>
-<p class="highlight">※在籍生の約86%が平均15点以上アップ（直近3ヶ月）</p>
-</div>
-</section>
+    <div class="cta-bar">
+        <a href="https://www.toyama-ikuei.com/apply/" class="cta-btn btn-toyama cta-track" data-loc="toyama">富山で無料体験</a>
+        <a href="https://www.kanazawa-ikuei.com/apply/" class="cta-btn btn-ishikawa cta-track" data-loc="kanazawa">石川で無料体験</a>
+        <a href="https://www.fukui-ikuei.com/apply/" class="cta-btn btn-3 btn-fukui cta-track" data-loc="fukui">福井で無料体験</a>
+    </div>
 
-<!-- video -->
-<section data-bg="https://images.pexels.com/photos/4144222/pexels-photo-4144222.jpeg" data-section="video">
-<div class="overlay"></div>
-<div class="content">
-<h2>授業イメージ（1分）</h2>
-
-<div class="video-thumb" id="video">
-<img src="https://img.youtube.com/vi/ScMzIvxBSi4/hqdefault.jpg">
-<div class="play-btn">▶</div>
-</div>
-
-</div>
-</section>
-
-<!-- closing -->
-<section data-bg="https://images.pexels.com/photos/4145191/pexels-photo-4145191.jpeg" data-section="closing">
-<div class="overlay"></div>
-<div class="content">
-<h2>最後に</h2>
-<p class="highlight">
-今のままでは大きく伸びる可能性は高くありません。<br><br>
-しかし「やり方」を変えれば短期間で結果は出ます。
-</p>
-<p>まずは無料体験で体感してください</p>
-</div>
-</section>
-
-<!-- CTA -->
-<div class="cta-bar">
-<a href="https://www.toyama-ikuei.com/apply/" class="cta-btn cta-track" data-location="toyama">富山で無料体験</a>
-<a href="https://www.kanazawa-ikuei.com/apply/" class="cta-btn cta-track" data-location="kanazawa">石川で無料体験</a>
-<a href="https://www.fukui-ikuei.com/apply/" class="cta-btn cta-track" data-location="fukui">福井で無料体験</a>
-</div>
-
-<script>
-/* 背景画像遅延 */
-const observer = new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      const el = entry.target;
-      el.style.backgroundImage = `url(${el.dataset.bg})`;
-      observer.unobserve(el);
-    }
-  });
-});
-document.querySelectorAll("section").forEach(sec=>observer.observe(sec));
-
-/* 動画クリックで読み込み */
-document.getElementById("video").addEventListener("click",function(){
-  this.innerHTML = `
-  <iframe width="100%" height="450"
-  src="https://www.youtube.com/embed/ScMzIvxBSi4?autoplay=1"
-  frameborder="0" allowfullscreen></iframe>`;
-});
-
-/* 計測 */
-window.dataLayer = window.dataLayer || [];
-
-function device(){
-  return window.innerWidth < 768 ? "mobile" : "desktop";
-}
-
-function scrollDepth(){
-  const max = document.body.scrollHeight - window.innerHeight;
-  return max > 0 ? Math.round((window.scrollY / max) * 100) : 0;
-}
-
-function getSection(){
-  let best="unknown",min=Infinity;
-  document.querySelectorAll("section").forEach(sec=>{
-    const r=sec.getBoundingClientRect();
-    const d=Math.abs(r.top-window.innerHeight/2);
-    if(d<min){
-      min=d;
-      best=sec.dataset.section||"unknown";
-    }
-  });
-  return best;
-}
-
-document.querySelectorAll(".cta-track").forEach(btn=>{
-  btn.addEventListener("click",()=>{
-    dataLayer.push({
-      event:"cta_click",
-      cta_location:btn.dataset.location,
-      cta_section:getSection(),
-      device_category:device(),
-      scroll_depth:scrollDepth(),
-      page_url:location.href
-    });
-  });
-});
-</script>
-
+    <script>
+        // ✅ GTM Tracking
+        document.querySelectorAll('.cta-track').forEach(btn => {
+            btn.addEventListener('click', () => {
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    'event': 'cta_click',
+                    'cta_location': btn.getAttribute('data-loc'),
+                    'page_title': document.title
+                });
+            });
+        });
+    </script>
 </body>
 </html>
